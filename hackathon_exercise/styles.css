@@ -1,0 +1,321 @@
+/* home-page */
+
+body {
+    background-color: rgb(8, 7, 7);
+    color: antiquewhite;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.headerfront h1 {
+    font-size: 50px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    padding-top: 140px;
+    padding-bottom: 94px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    background-image: url('images/background_header1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quote {
+    margin-bottom: 60px;
+}
+
+ul {
+    padding: 0;
+}
+
+.headernav {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 40px);
+    background-color: #313030;
+    border: 10px solid antiquewhite;
+    font-size: 18px;
+    grid-template-areas:
+        "h h h h"
+        "w w w w"
+        "b b b b"
+        "c c c c"
+}
+
+.headernav li {
+    list-style-type: none;
+}
+
+.headernav a {
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+.headernav li a:hover {
+    background-color: rgb(0, 0, 0);
+    color: antiquewhite;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.home {
+    grid-area: h;
+}
+
+.buycool {
+    grid-area: b;
+}
+
+.whatido {
+    grid-area: w;
+}
+
+.contact {
+    grid-area: c;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.socialmedia {
+    padding: 10px;
+}
+
+/* what i do*/
+
+button {
+    width: 100%;
+    font-size: 16px;
+    color: antiquewhite;
+    border: 3px solid antiquewhite;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.whatido2 {
+    margin: 20px;
+    border: 5px solid antiquewhite;
+    border-radius: 20%;
+}
+
+.link a :hover {
+    background-color: rgb(0, 0, 0);
+    color: antiquewhite;
+    display: block;
+    padding-bottom: 15px;
+    padding-top: 15px
+}
+
+.link a:visited {
+    color: antiquewhite
+}
+
+/*buy cool stuff*/
+
+.merchandise {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 100px);
+    background-color: #313030;
+    border: 10px solid antiquewhite;
+    font-size: 18px;
+    grid-template-areas:
+        "t0 t0 t0 "
+        "t1 t2 t3 "
+        "a0 a0 a0 "
+        "a1 a2 a3 "
+        "sam0 sam0 sam0 "
+        "sam1 sam2 sam3 "
+}
+
+.merchandise img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+
+.merchandise .t0 {
+    grid-area: t0
+}
+
+.merchandise .t1 {
+    grid-area: t1;
+}
+
+.merchandise .t2 {
+    grid-area: t2;
+}
+
+.merchandise .t3 {
+    grid-area: t3;
+}
+
+.merchandise .apr0 {
+    grid-area: a0;
+}
+
+.merchandise .apr1 {
+    grid-area: a1;
+}
+
+.merchandise .apr2 {
+    grid-area: a2;
+}
+
+.merchandise .apr3 {
+    grid-area: a3;
+}
+
+.merchandise .sam0 {
+    grid-area: sam0;
+}
+
+.merchandise .sam1 {
+    grid-area: sam1;
+}
+
+.merchandise .sam2 {
+    grid-area: sam2;
+}
+
+.merchandise sam3 {
+    grid-area: sam03;
+}
+
+/* contact-me */
+
+input[type=radio] {
+    display: flex;
+    position: relative;
+    top: 21px;
+    margin-left: 113px;
+}
+
+.input-chef {
+    width: 100%;
+    margin: auto;
+    padding-inline-start: 3px;
+    padding-inline-end: 10px;
+    line-height: 25px;
+    background-color: #313030;
+    border: 10px solid antiquewhite;
+    font-size: 16px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.input-chef input {
+    width: 100%;
+    margin: auto;
+}
+
+.input-chef textarea {
+    width: 100%
+}
+
+.input-chef button {
+    width: 100%;
+    font-size: 16px;
+    color: antiquewhite;
+    border: 3px solid antiquewhite;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+    margin: 3px;
+}
+
+/*media-queries*/
+
+@media screen and (min-width: 620px) {
+    .headernav {
+        font-size: 20px;
+        grid-template-rows: repeat(2, 40px);
+        grid-template-areas:
+            "h h w w"
+            "b b c c"
+    }
+
+    .headerfront h1 {
+        font-size: 60px;
+        text-shadow: 2px 0 rgb(1, 1, 1), -2px 0 #ed0000, 0 2px rgb(10, 10, 10), 0 -2px #fff,
+            1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    .link {
+        width: 300px;
+        margin: auto;
+
+        align-items: center;
+    }
+
+    .link a {
+        font-size: 20px;
+    }
+
+    .input-chef {
+        width: 600px;
+        margin: auto;
+    }
+
+    .merchandise img {
+        width: 60%;
+        max-height: 100%;
+        grid-template-rows: 150px;
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .headernav {
+        font-size: 24px;
+        grid-template-rows: repeat(1, 40px);
+        grid-template-areas:
+            "h w b c"
+
+    }
+
+    .headerfront h1 {
+        font-size: 100px;
+        text-shadow: 2px 0 rgb(1, 1, 1), -2px 0 #ed0000, 0 2px rgb(10, 10, 10), 0 -2px #fff,
+            1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    }
+
+    body {
+        font-size: 22px;
+    }
+
+    .link a {
+        font-size: 22px;
+    }
+
+    .merchandise {
+        grid-template-rows: 50px;
+    }
+
+    .input-chef {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .input-chef form {
+        font-size: 22px;
+    }
+
+    .input-chef button {
+        font-size: 22px;
+    }
+}
